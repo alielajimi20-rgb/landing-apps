@@ -3,103 +3,134 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>مركز الروابط | Links Hub</title>
-
+<title>Ali Hub Media</title>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Tajawal&display=swap');
+
+* { box-sizing: border-box; }
+
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
+  font-family: 'Tajawal', Arial, sans-serif;
+  background: #f0f4f8;
+  margin: 0;
+  padding: 20px;
   text-align: center;
-  padding: 40px;
+  position: relative;
 }
-.container {
-  max-width: 480px;
+
+.wrapper {
+  max-width: 600px;
   margin: auto;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+/* اسمك صغير في الزاوية */
+.small-logo {
+  position: fixed;
+  top: 10px;
+  right: 10px; /* يمكن تغييره إلى left إذا بغيت */
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #007bff;
+  opacity: 0.7; /* لتكون أنيقة وغير مزعجة */
+  z-index: 1000;
+}
+
+.container {
   background: white;
-  padding: 25px;
+  margin-bottom: 20px;
+  padding: 20px;
   border-radius: 14px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-h2 {
-  margin-bottom: 10px;
-}
-p {
-  color: #555;
-}
+
+h2 { margin-bottom: 10px; color: #333; font-size: 1.4em; }
+
+p { color: #555; margin-bottom: 15px; font-size: 1em; }
+
 .button {
   display: block;
-  background: #007bff;
-  padding: 12px;
-  color: white;
-  margin: 12px 0;
+  padding: 14px;
+  margin: 8px 0;
+  border-radius: 10px;
   text-decoration: none;
-  border-radius: 8px;
-  font-size: 18px;
-}
-.button:hover {
-  background: #005fcc;
+  color: white;
+  font-size: 16px;
+  transition: 0.3s;
+  word-wrap: break-word;
 }
 
-/* زر تبديل اللغة */
-.lang-switch {
-  cursor: pointer;
-  color: #007bff;
-  font-weight: bold;
-  margin-bottom: 15px;
+/* ألوان مختلفة لكل قسم */
+.app { background: #007bff; }      .app:hover { background: #005fcc; }
+.website { background: #28a745; }  .website:hover { background: #1e7e34; }
+.ecommerce { background: #ffc107; color: #333; } .ecommerce:hover { background: #e0a800; }
+.cpa { background: #6f42c1; }      .cpa:hover { background: #563d7c; }
+.featured { background: #fd7e14; }  .featured:hover { background: #e8590c; }
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .wrapper { max-width: 90%; }
+  h2 { font-size: 1.2em; }
+  p { font-size: 0.95em; }
+  .button { font-size: 15px; padding: 12px; }
+}
+
+@media screen and (max-width: 480px) {
+  h2 { font-size: 1.1em; }
+  p { font-size: 0.9em; }
+  .button { font-size: 14px; padding: 10px; }
 }
 </style>
 </head>
-
 <body>
 
-<div class="container">
+<!-- الاسم الصغير في الزاوية -->
+<div class="small-logo">Ali Hub Media</div>
 
-  <div class="lang-switch" onclick="switchLang()">
-    🌐 تغيير اللغة / Switch Language
+<div class="wrapper">
+
+  <!-- قسم التطبيقات -->
+  <div class="container">
+    <h2>التطبيقات / Apps</h2>
+    <p>أفضل التطبيقات لجميع الأجهزة.</p>
+    <a href="LINK1" class="button app">تطبيق اليوم / App of the Day</a>
+    <a href="LINK2" class="button app">تطبيق مميز / Featured App</a>
   </div>
 
-  <h2 id="title">مرحبا بكم 👋</h2>
-  <p id="desc">هنا غادي تلقاو أفضل التطبيقات والمواقع والخدمات اللي كانشرح يومياً.</p>
+  <!-- قسم المواقع -->
+  <div class="container">
+    <h2>المواقع / Websites</h2>
+    <p>مواقع مفيدة وجديدة يومياً.</p>
+    <a href="LINK3" class="button website">موقع اليوم / Website of the Day</a>
+    <a href="LINK4" class="button website">موقع مميز / Featured Website</a>
+  </div>
 
-  <a id="b1" href="LINK1" class="button">🔵 أفضل تطبيق اليوم</a>
-  <a id="b2" href="LINK2" class="button">🟢 موقع مفيد اليوم</a>
-  <a id="b3" href="LINK3" class="button">🟣 عروض مجانية (OGAds)</a>
-  <a id="b4" href="LINK4" class="button">🟠 التطبيقات المقترحة</a>
+  <!-- قسم التجارة / المنتجات -->
+  <div class="container">
+    <h2>التجارة / Products</h2>
+    <p>منتجات وخدمات للبيع عبر الإنترنت.</p>
+    <a href="LINK5" class="button ecommerce">منتج جديد / New Product</a>
+    <a href="LINK6" class="button ecommerce">عرض خاص / Special Offer</a>
+  </div>
 
-  <p id="footer">يتم تحديث الصفحة بشكل مستمر 🔄</p>
+  <!-- قسم العروض الرقمية / CPA -->
+  <div class="container">
+    <h2>العروض الرقمية / Digital Offers</h2>
+    <p>عروض وخدمات ربحية عبر الإنترنت.</p>
+    <a href="LINK7" class="button cpa">عرض اليوم / Offer of the Day</a>
+    <a href="LINK8" class="button cpa">عرض مميز / Featured Offer</a>
+  </div>
+
+  <!-- قسم مواقع مميزة -->
+  <div class="container">
+    <h2>مواقع مميزة / Featured Sites</h2>
+    <p>نرشح لكم أفضل المواقع المميزة.</p>
+    <a href="LINK9" class="button featured">موقع مميز 1 / Featured Site 1</a>
+    <a href="LINK10" class="button featured">موقع مميز 2 / Featured Site 2</a>
+  </div>
 
 </div>
-
-<script>
-let lang = "ar";
-
-function switchLang() {
-  if (lang === "ar") {
-    lang = "en";
-    document.documentElement.lang = "en";
-
-    document.getElementById("title").innerText = "Welcome 👋";
-    document.getElementById("desc").innerText = "Here you will find the best apps, websites and daily recommended services.";
-    document.getElementById("b1").innerText = "🔵 App of the Day";
-    document.getElementById("b2").innerText = "🟢 Useful Website";
-    document.getElementById("b3").innerText = "🟣 Free Offers (OGAds)";
-    document.getElementById("b4").innerText = "🟠 Recommended Apps";
-    document.getElementById("footer").innerText = "Page updated regularly 🔄";
-
-  } else {
-    lang = "ar";
-    document.documentElement.lang = "ar";
-
-    document.getElementById("title").innerText = "مرحبا بكم 👋";
-    document.getElementById("desc").innerText = "هنا غادي تلقاو أفضل التطبيقات والمواقع والخدمات اللي كانشرح يومياً.";
-    document.getElementById("b1").innerText = "🔵 أفضل تطبيق اليوم";
-    document.getElementById("b2").innerText = "🟢 موقع مفيد اليوم";
-    document.getElementById("b3").innerText = "🟣 عروض مجانية (OGAds)";
-    document.getElementById("b4").innerText = "🟠 التطبيقات المقترحة";
-    document.getElementById("footer").innerText = "يتم تحديث الصفحة بشكل مستمر 🔄";
-  }
-}
-</script>
 
 </body>
 </html>
