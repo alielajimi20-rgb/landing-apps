@@ -10,136 +10,67 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-CG13GMVVL0');
+  function enableAnalytics(){
+    gtag('js', new Date());
+    gtag('config', 'G-CG13GMVVL0');
+  }
 </script>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Tajawal&display=swap');
-
 * { box-sizing: border-box; }
 
-body {
-  font-family: 'Tajawal', Arial, sans-serif;
-  background: #f0f4f8;
-  margin: 0;
-  padding: 20px;
-  text-align: center;
-  position: relative;
-}
+body { font-family: 'Tajawal', Arial, sans-serif; background: #f0f4f8; margin:0; padding:20px; text-align:center; }
+.wrapper { max-width:600px; margin:auto; overflow-y:auto; padding:10px; }
+.small-logo { position:fixed; top:10px; right:10px; font-size:0.9em; font-weight:bold; color:#007bff; opacity:0.7; z-index:1000; }
 
-.wrapper {
-  max-width: 600px;
-  margin: auto;
-  overflow-y: auto;
-  padding: 10px;
-}
+.container { background:white; margin-bottom:20px; padding:20px; border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:left; }
+h2 { margin-bottom:10px; color:#007bff; font-size:1.4em; text-align:center; }
+p { color:#555; margin-bottom:15px; font-size:1em; text-align:center; }
+.button { display:flex; align-items:center; justify-content:center; padding:12px 15px; margin:8px 0; border-radius:10px; text-decoration:none; color:white; font-size:16px; transition:0.3s; }
+.button i { margin-right:8px; }
+.app { background:#007bff; } .app:hover { background:#005fcc; }
+.website { background:#28a745; } .website:hover { background:#1e7e34; }
+.ecommerce { background:#ffc107; color:#333; } .ecommerce:hover { background:#e0a800; }
+.cpa { background:#6f42c1; } .cpa:hover { background:#563d7c; }
+.featured { background:#fd7e14; } .featured:hover { background:#e8590c; }
 
-/* الاسم الصغير في الزاوية */
-.small-logo {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  font-size: 0.9em;
-  font-weight: bold;
-  color: #007bff;
-  opacity: 0.7;
-  z-index: 1000;
-}
+.disclaimer-section { background:#e9ecef; padding:15px; margin-top:20px; border-radius:10px; font-size:0.95em; line-height:1.5; text-align:left; }
+.disclaimer-section h2 { color:#007bff; font-size:1.2em; margin-top:10px; }
+.disclaimer-section p { color:#555; }
+.back-top { display:inline-block; margin-top:10px; font-size:12px; padding:6px 10px; background:#6c757d; color:white; text-decoration:none; border-radius:6px; transition:0.3s; }
+.back-top:hover { background:#495057; }
 
-.container {
-  background: white;
-  margin-bottom: 20px;
-  padding: 20px;
-  border-radius: 14px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-align: left;
-}
+/* Consent Banner */
+#consent-banner { position:fixed; bottom:0; left:0; right:0; background:#007bff; color:white; padding:15px; z-index:10000; display:flex; justify-content:space-between; align-items:center; font-size:0.95em; }
+#consent-banner button { background:white; color:#007bff; border:none; padding:8px 12px; border-radius:5px; cursor:pointer; font-weight:bold; }
 
-h2 { margin-bottom: 10px; color: #007bff; font-size: 1.4em; text-align: center; }
-
-p { color: #555; margin-bottom: 15px; font-size: 1em; text-align: center; }
-
-.button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 15px;
-  margin: 8px 0;
-  border-radius: 10px;
-  text-decoration: none;
-  color: white;
-  font-size: 16px;
-  transition: 0.3s;
-}
-
-.button i {
-  margin-right: 8px;
-}
-
-/* ألوان مختلفة لكل قسم */
-.app { background: #007bff; }      .app:hover { background: #005fcc; }
-.website { background: #28a745; }  .website:hover { background: #1e7e34; }
-.ecommerce { background: #ffc107; color: #333; } .ecommerce:hover { background: #e0a800; }
-.cpa { background: #6f42c1; }      .cpa:hover { background: #563d7c; }
-.featured { background: #fd7e14; }  .featured:hover { background: #e8590c; }
-
-/* قسم القانوني داخل نفس الصفحة */
-.disclaimer-section {
-  background: #e9ecef;
-  padding: 15px;
-  margin-top: 20px;
-  border-radius: 10px;
-  font-size: 0.95em;
-  line-height: 1.5;
-  text-align: left;
-}
-
-.disclaimer-section h2 {
-  color: #007bff;
-  font-size: 1.2em;
-  margin-top: 10px;
-}
-
-.disclaimer-section p {
-  color: #555;
-}
-
-.back-top {
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 12px;
-  padding: 6px 10px;
-  background: #6c757d;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: 0.3s;
-}
-
-.back-top:hover { background: #495057; }
-
-/* Responsive Adjustments */
-@media screen and (max-width: 768px) {
-  .wrapper { max-width: 90%; }
-  h2 { font-size: 1.2em; }
-  p { font-size: 0.95em; }
-  .button { font-size: 15px; padding: 12px; }
-}
-
-@media screen and (max-width: 480px) {
-  h2 { font-size: 1.1em; }
-  p { font-size: 0.9em; }
-  .button { font-size: 14px; padding: 10px; }
-}
+@media screen and (max-width:768px) { .wrapper { max-width:90%; } h2 { font-size:1.2em; } p { font-size:0.95em; } .button { font-size:15px; padding:12px; } }
+@media screen and (max-width:480px) { h2 { font-size:1.1em; } p { font-size:0.9em; } .button { font-size:14px; padding:10px; } }
 </style>
 </head>
 <body>
 
-<!-- الاسم الصغير في الزاوية -->
-<div class="small-logo">Ali Hub Media</div>
+<!-- Consent Banner -->
+<div id="consent-banner">
+  <span>نستخدم ملفات تعريف الارتباط لتحسين تجربتك وتحليل الموقع. / We use cookies to improve your experience and analytics.</span>
+  <button onclick="acceptConsent()">موافق / Accept</button>
+</div>
 
+<script>
+function acceptConsent(){
+  document.getElementById('consent-banner').style.display='none';
+  enableAnalytics();
+  localStorage.setItem('consentGiven','true');
+}
+if(localStorage.getItem('consentGiven')==='true'){ 
+  document.getElementById('consent-banner').style.display='none';
+  enableAnalytics();
+}
+</script>
+
+<div class="small-logo">Ali Hub Media</div>
 <div class="wrapper">
 
   <!-- قسم التطبيقات -->
@@ -182,28 +113,19 @@ p { color: #555; margin-bottom: 15px; font-size: 1em; text-align: center; }
     <a href="LINK10" class="button featured"><i class="fas fa-star"></i>موقع مميز 2 / Featured Site 2</a>
   </div>
 
-  <!-- قسم القانوني داخل نفس الصفحة -->
+  <!-- قسم القانوني -->
   <div class="disclaimer-section">
     <h2>إخلاء المسؤولية / Disclaimer</h2>
-    <p>
-      هذا الموقع يعمل في مجال التسويق بالعمولة (Affiliate Marketing). نحن لسنا الشركة المالكة للمنتجات أو الخدمات المذكورة هنا، وجميع المعلومات مقدمة لأغراض الترويج فقط.
-    </p>
-    <p>
-      This website operates in the field of affiliate marketing. We are not the owner of the products or services listed here, and all information is provided for promotional purposes only.
-    </p>
+    <p>هذا الموقع يعمل في مجال التسويق بالعمولة (Affiliate Marketing). نحن لسنا الشركة المالكة للمنتجات أو الخدمات المذكورة هنا، وجميع المعلومات مقدمة لأغراض الترويج فقط.</p>
+    <p>This website operates in the field of affiliate marketing. We are not the owner of the products or services listed here, and all information is provided for promotional purposes only.</p>
 
     <h2>سياسة الخصوصية / Privacy Policy</h2>
-    <p>
-      نحن نحترم خصوصيتك. قد نجمع معلومات بسيطة مثل البريد الإلكتروني أو البيانات الأساسية فقط لأغراض الترويج وتحسين الخدمات، ولن نشارك بياناتك مع أي طرف ثالث بدون موافقتك.
-    </p>
-    <p>
-      We respect your privacy. We may collect basic information such as email or basic data for promotional purposes and to improve services, and we will not share your data with any third party without your consent.
-    </p>
+    <p>نحن نحترم خصوصيتك. قد نجمع معلومات بسيطة مثل البريد الإلكتروني أو البيانات الأساسية فقط لأغراض الترويج وتحسين الخدمات، ولن نشارك بياناتك مع أي طرف ثالث بدون موافقتك.</p>
+    <p>We respect your privacy. We may collect basic information such as email or basic data for promotional purposes and to improve services, and we will not share your data with any third party without your consent.</p>
 
     <a href="#top" class="back-top">العودة إلى الأعلى / Back to Top</a>
   </div>
 
 </div>
-
 </body>
 </html>
