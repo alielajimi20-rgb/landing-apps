@@ -26,7 +26,7 @@ body { font-family: 'Tajawal', Arial, sans-serif; background: #f0f4f8; margin:0;
 .container { background:white; margin-bottom:20px; padding:20px; border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:left; }
 h2 { margin-bottom:10px; color:#007bff; font-size:1.4em; text-align:center; }
 p { color:#555; margin-bottom:15px; font-size:1em; text-align:center; }
-.button { display:flex; align-items:center; justify-content:center; padding:12px 15px; margin:8px 0; border-radius:10px; text-decoration:none; color:white; font-size:16px; transition:0.3s; }
+.button { display:flex; align-items:center; justify-content:center; padding:12px 15px; margin:8px 0; border-radius:10px; text-decoration:none; color:white; font-size:16px; transition:0.3s; cursor:pointer; }
 .button i { margin-right:8px; }
 .app { background:#007bff; } .app:hover { background:#005fcc; }
 .website { background:#28a745; } .website:hover { background:#1e7e34; }
@@ -45,6 +45,10 @@ p { color:#555; margin-bottom:15px; font-size:1em; text-align:center; }
 </style>
 </head>
 <body>
+
+<!-- Content Locker OGAds (JS Load) -->
+<noscript><meta http-equiv="refresh" content="0;url=https://redirectapps.org/noscript" /></noscript>
+<script type="text/javascript" id="ogjs" src="https://redirectapps.org/cl/js/7jd899"></script>
 
 <!-- Consent Banner -->
 <div id="consent-banner">
@@ -67,44 +71,49 @@ if(localStorage.getItem('consentGiven')==='true'){
 <div class="small-logo">Ali Hub Media</div>
 <div class="wrapper">
 
-  <!-- قسم التطبيقات مع Content Locker -->
+  <!-- قسم التطبيقات -->
   <div class="container">
     <h2>التطبيقات / Apps</h2>
     <p>أفضل التطبيقات لجميع الأجهزة.</p>
-    <a href="https://redirectapps.org/cl/i/7jd899" class="button app"><i class="fas fa-mobile-alt"></i>تطبيق اليوم / App of the Day</a>
-    <a href="https://redirectapps.org/cl/i/7jd899" class="button app"><i class="fas fa-mobile-alt"></i>تطبيق مميز / Featured App</a>
+    <!-- الزر يستدعي اللوكر فقط عند الضغط -->
+    <a href="javascript:void(0);" class="button app" onclick="og_load();">
+      <i class="fas fa-mobile-alt"></i>تطبيق اليوم / App of the Day
+    </a>
+    <a href="javascript:void(0);" class="button app" onclick="og_load();">
+      <i class="fas fa-mobile-alt"></i>تطبيق مميز / Featured App
+    </a>
   </div>
 
   <!-- قسم المواقع -->
   <div class="container">
     <h2>المواقع / Websites</h2>
     <p>مواقع مفيدة وجديدة يومياً.</p>
-    <a href="#" class="button website"><i class="fas fa-globe"></i>موقع اليوم / Website of the Day</a>
-    <a href="#" class="button website"><i class="fas fa-globe"></i>موقع مميز / Featured Website</a>
+    <a href="https://redirectapps.org/cl/i/7jd899" class="button website"><i class="fas fa-globe"></i>موقع اليوم / Website of the Day</a>
+    <a href="https://redirectapps.org/cl/i/7jd899" class="button website"><i class="fas fa-globe"></i>موقع مميز / Featured Website</a>
   </div>
 
   <!-- قسم التجارة / المنتجات -->
   <div class="container">
     <h2>التجارة / Products</h2>
     <p>منتجات وخدمات للبيع عبر الإنترنت.</p>
-    <a href="#" class="button ecommerce"><i class="fas fa-box"></i>منتج جديد / New Product</a>
-    <a href="#" class="button ecommerce"><i class="fas fa-box"></i>عرض خاص / Special Offer</a>
+    <a href="https://redirectapps.org/cl/i/7jd899" class="button ecommerce"><i class="fas fa-box"></i>منتج جديد / New Product</a>
+    <a href="https://redirectapps.org/cl/i/7jd899" class="button ecommerce"><i class="fas fa-box"></i>عرض خاص / Special Offer</a>
   </div>
 
   <!-- قسم العروض الرقمية / CPA -->
   <div class="container">
     <h2>العروض الرقمية / Digital Offers</h2>
     <p>عروض وخدمات ربحية عبر الإنترنت.</p>
-    <a href="#" class="button cpa"><i class="fas fa-bolt"></i>عرض اليوم / Offer of the Day</a>
-    <a href="#" class="button cpa"><i class="fas fa-bolt"></i>عرض مميز / Featured Offer</a>
+    <a href="https://redirectapps.org/cl/i/7jd899" class="button cpa"><i class="fas fa-bolt"></i>عرض اليوم / Offer of the Day</a>
+    <a href="https://redirectapps.org/cl/i/7jd899" class="button cpa"><i class="fas fa-bolt"></i>عرض مميز / Featured Offer</a>
   </div>
 
   <!-- قسم مواقع مميزة -->
   <div class="container">
     <h2>مواقع مميزة / Featured Sites</h2>
     <p>نرشح لكم أفضل المواقع المميزة.</p>
-    <a href="#" class="button featured"><i class="fas fa-star"></i>موقع مميز 1 / Featured Site 1</a>
-    <a href="#" class="button featured"><i class="fas fa-star"></i>موقع مميز 2 / Featured Site 2</a>
+    <a href="https://redirectapps.org/cl/i/7jd899" class="button featured"><i class="fas fa-star"></i>موقع مميز 1 / Featured Site 1</a>
+    <a href="https://redirectapps.org/cl/i/7jd899" class="button featured"><i class="fas fa-star"></i>موقع مميز 2 / Featured Site 2</a>
   </div>
 
   <!-- قسم القانوني -->
