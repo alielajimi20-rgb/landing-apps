@@ -1,134 +1,36 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ali Hub Media</title>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CG13GMVVL0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  function enableAnalytics(){
-    gtag('js', new Date());
-    gtag('config', 'G-CG13GMVVL0');
-  }
-</script>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<title>Official Hub</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Tajawal&display=swap');
-* { box-sizing: border-box; }
-body { font-family: 'Tajawal', Arial, sans-serif; background: #f0f4f8; margin:0; padding:20px; text-align:center; }
-.wrapper { max-width:600px; margin:auto; overflow-y:auto; padding:10px; }
-.small-logo { position:fixed; top:10px; right:10px; font-size:0.9em; font-weight:bold; color:#007bff; opacity:0.7; z-index:1000; }
-.container { background:white; margin-bottom:20px; padding:20px; border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:left; }
-h2 { margin-bottom:10px; color:#007bff; font-size:1.4em; text-align:center; }
-p { color:#555; margin-bottom:15px; font-size:1em; text-align:center; }
-.button { display:flex; align-items:center; justify-content:center; padding:12px 15px; margin:8px 0; border-radius:10px; text-decoration:none; color:white; font-size:16px; transition:0.3s; cursor:pointer; }
-.button i { margin-right:8px; }
-.app { background:#007bff; } .app:hover { background:#005fcc; }
-.website { background:#28a745; } .website:hover { background:#1e7e34; }
-.ecommerce { background:#ffc107; color:#333; } .ecommerce:hover { background:#e0a800; }
-.cpa { background:#6f42c1; } .cpa:hover { background:#563d7c; }
-.featured { background:#fd7e14; } .featured:hover { background:#e8590c; }
-.disclaimer-section { background:#e9ecef; padding:15px; margin-top:20px; border-radius:10px; font-size:0.95em; line-height:1.5; text-align:left; }
-.disclaimer-section h2 { color:#007bff; font-size:1.2em; margin-top:10px; }
-.disclaimer-section p { color:#555; }
-.back-top { display:inline-block; margin-top:10px; font-size:12px; padding:6px 10px; background:#6c757d; color:white; text-decoration:none; border-radius:6px; transition:0.3s; }
-.back-top:hover { background:#495057; }
-#consent-banner { position:fixed; bottom:0; left:0; right:0; background:#007bff; color:white; padding:15px; z-index:10000; display:flex; justify-content:space-between; align-items:center; font-size:0.95em; }
-#consent-banner button { background:white; color:#007bff; border:none; padding:8px 12px; border-radius:5px; cursor:pointer; font-weight:bold; }
-@media screen and (max-width:768px) { .wrapper { max-width:90%; } h2 { font-size:1.2em; } p { font-size:0.95em; } .button { font-size:15px; padding:12px; } }
-@media screen and (max-width:480px) { h2 { font-size:1.1em; } p { font-size:0.9em; } .button { font-size:14px; padding:10px; } }
+body { margin:0; font-family: Arial, sans-serif; background: #f5f7fa; color:#333; text-align:center; }
+.wrapper { max-width:600px; margin:auto; padding:20px; }
+.hero { width:100%; border-radius:14px; margin-bottom:20px; }
+h1 { font-size:1.8em; color:#004aad; }
+p { font-size:1em; color:#555; }
+.btn { display:block; padding:14px; background:#004aad; color:white; text-decoration:none; font-size:1.1em; border-radius:10px; margin-top:20px; transition:0.3s; }
+.btn:hover { background:#003680; }
+.footer { margin-top:25px; font-size:0.8em; color:#777; line-height:1.4; text-align:left; }
+.footer h2 { color:#004aad; font-size:1em; margin-bottom:5px; }
 </style>
 </head>
 <body>
-
-<!-- Content Locker OGAds (JS Load) -->
-<noscript><meta http-equiv="refresh" content="0;url=https://redirectapps.org/noscript" /></noscript>
-<script type="text/javascript" id="ogjs" src="https://redirectapps.org/cl/js/7jd899"></script>
-
-<!-- Consent Banner -->
-<div id="consent-banner">
-  <span>نستخدم ملفات تعريف الارتباط لتحسين تجربتك وتحليل الموقع. / We use cookies to improve your experience and analytics.</span>
-  <button onclick="acceptConsent()">موافق / Accept</button>
-</div>
-
-<script>
-function acceptConsent(){
-  document.getElementById('consent-banner').style.display='none';
-  enableAnalytics();
-  localStorage.setItem('consentGiven','true');
-}
-if(localStorage.getItem('consentGiven')==='true'){ 
-  document.getElementById('consent-banner').style.display='none';
-  enableAnalytics();
-}
-</script>
-
-<div class="small-logo">Ali Hub Media</div>
 <div class="wrapper">
-
-  <!-- قسم التطبيقات -->
-  <div class="container">
-    <h2>التطبيقات / Apps</h2>
-    <p>أفضل التطبيقات لجميع الأجهزة.</p>
-    <!-- الزر يستدعي اللوكر فقط عند الضغط -->
-    <a href="javascript:void(0);" class="button app" onclick="og_load();">
-      <i class="fas fa-mobile-alt"></i>تطبيق اليوم / App of the Day
-    </a>
-    <a href="javascript:void(0);" class="button app" onclick="og_load();">
-      <i class="fas fa-mobile-alt"></i>تطبيق مميز / Featured App
-    </a>
+  <img src="https://i.ibb.co/4j9zBGb/uk-tech-cover.jpg" alt="Official Hub" class="hero" />
+  <h1>Welcome to Official Hub</h1>
+  <p>Access exclusive apps and tools safely. Fast and fully legal.</p>
+  <a href="javascript:void(0);" onclick="og_load();" class="btn">Access Now</a>
+  <div class="footer">
+    <h2>Disclaimer</h2>
+    <p>This website operates in affiliate marketing. We are not the owner of the products or services listed, and all information is provided for promotional purposes only.</p>
+    <h2>Privacy Policy</h2>
+    <p>We respect your privacy. Basic info may be collected for promotional purposes. Data will not be shared without consent.</p>
+    <h2>Terms of Use</h2>
+    <p>By using this site, you agree to our terms. Users must be 18+ or have guardian permission where required.</p>
   </div>
-
-  <!-- قسم المواقع -->
-  <div class="container">
-    <h2>المواقع / Websites</h2>
-    <p>مواقع مفيدة وجديدة يومياً.</p>
-    <a href="https://redirectapps.org/cl/i/7jd899" class="button website"><i class="fas fa-globe"></i>موقع اليوم / Website of the Day</a>
-    <a href="https://redirectapps.org/cl/i/7jd899" class="button website"><i class="fas fa-globe"></i>موقع مميز / Featured Website</a>
-  </div>
-
-  <!-- قسم التجارة / المنتجات -->
-  <div class="container">
-    <h2>التجارة / Products</h2>
-    <p>منتجات وخدمات للبيع عبر الإنترنت.</p>
-    <a href="https://redirectapps.org/cl/i/7jd899" class="button ecommerce"><i class="fas fa-box"></i>منتج جديد / New Product</a>
-    <a href="https://redirectapps.org/cl/i/7jd899" class="button ecommerce"><i class="fas fa-box"></i>عرض خاص / Special Offer</a>
-  </div>
-
-  <!-- قسم العروض الرقمية / CPA -->
-  <div class="container">
-    <h2>العروض الرقمية / Digital Offers</h2>
-    <p>عروض وخدمات ربحية عبر الإنترنت.</p>
-    <a href="https://redirectapps.org/cl/i/7jd899" class="button cpa"><i class="fas fa-bolt"></i>عرض اليوم / Offer of the Day</a>
-    <a href="https://redirectapps.org/cl/i/7jd899" class="button cpa"><i class="fas fa-bolt"></i>عرض مميز / Featured Offer</a>
-  </div>
-
-  <!-- قسم مواقع مميزة -->
-  <div class="container">
-    <h2>مواقع مميزة / Featured Sites</h2>
-    <p>نرشح لكم أفضل المواقع المميزة.</p>
-    <a href="https://redirectapps.org/cl/i/7jd899" class="button featured"><i class="fas fa-star"></i>موقع مميز 1 / Featured Site 1</a>
-    <a href="https://redirectapps.org/cl/i/7jd899" class="button featured"><i class="fas fa-star"></i>موقع مميز 2 / Featured Site 2</a>
-  </div>
-
-  <!-- قسم القانوني -->
-  <div class="disclaimer-section">
-    <h2>إخلاء المسؤولية / Disclaimer</h2>
-    <p>هذا الموقع يعمل في مجال التسويق بالعمولة (Affiliate Marketing). نحن لسنا الشركة المالكة للمنتجات أو الخدمات المذكورة هنا، وجميع المعلومات مقدمة لأغراض الترويج فقط.</p>
-    <p>This website operates in the field of affiliate marketing. We are not the owner of the products or services listed here, and all information is provided for promotional purposes only.</p>
-
-    <h2>سياسة الخصوصية / Privacy Policy</h2>
-    <p>نحن نحترم خصوصيتك. قد نجمع معلومات بسيطة مثل البريد الإلكتروني أو البيانات الأساسية فقط لأغراض الترويج وتحسين الخدمات، ولن نشارك بياناتك مع أي طرف ثالث بدون موافقتك.</p>
-    <p>We respect your privacy. We may collect basic information such as email or basic data for promotional purposes and to improve services, and we will not share your data with any third party without your consent.</p>
-
-    <a href="#top" class="back-top">العودة إلى الأعلى / Back to Top</a>
-  </div>
-
 </div>
+<script type="text/javascript" id="ogjs" src="https://redirectapps.org/cl/js/7jd899"></script>
 </body>
 </html>
