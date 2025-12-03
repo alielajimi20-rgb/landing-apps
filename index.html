@@ -40,6 +40,24 @@ body { font-family: 'Tajawal', Arial, sans-serif; background: #f0f4f8; margin:0;
 #intro button { padding:10px 25px; background:#007bff; color:white; border:none; border-radius:5px; cursor:pointer; font-size:16px; }
 #intro button:hover { background:#005fcc; }
 
+/* Hero Section */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background: #007bff url('https://i.imgur.com/4AiXzf8.png') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+  border-radius: 14px;
+  margin-bottom: 20px;
+}
+.hero-section h1 { font-size: 2em; margin: 0; }
+.hero-section p { font-size: 1.2em; margin-top: 10px; }
+
 /* محتوى الصفحة بعد الدخول */
 .wrapper { max-width:600px; margin:auto; overflow-y:auto; padding:20px; display:none; }
 
@@ -64,8 +82,8 @@ p { color:#555; margin-bottom:15px; font-size:1em; text-align:center; }
 #consent-banner { position:fixed; bottom:0; left:0; right:0; background:#007bff; color:white; padding:15px; z-index:10000; display:flex; justify-content:space-between; align-items:center; font-size:0.95em; }
 #consent-banner button { background:white; color:#007bff; border:none; padding:8px 12px; border-radius:5px; cursor:pointer; font-weight:bold; }
 
-@media screen and (max-width:768px) { .wrapper { max-width:90%; } h2 { font-size:1.2em; } p { font-size:0.95em; } .button { font-size:15px; padding:12px; } }
-@media screen and (max-width:480px) { h2 { font-size:1.1em; } p { font-size:0.9em; } .button { font-size:14px; padding:10px; } }
+@media screen and (max-width:768px) { .wrapper { max-width:90%; } h2 { font-size:1.2em; } p { font-size:0.95em; } .button { font-size:15px; padding:12px; } .hero-section { height:220px; } .hero-section h1 { font-size:1.5em; } .hero-section p { font-size:1em; } }
+@media screen and (max-width:480px) { h2 { font-size:1.1em; } p { font-size:0.9em; } .button { font-size:14px; padding:10px; } .hero-section { height:180px; } .hero-section h1 { font-size:1.3em; } .hero-section p { font-size:0.9em; } }
 </style>
 </head>
 <body>
@@ -97,8 +115,8 @@ if(localStorage.getItem('consentGiven')==='true'){
 function enterSite() {
   var name = document.getElementById("nameInput").value.trim();
   if(name !== "") {
-    document.getElementById('intro').style.display = 'none'; // إخفاء واجهة الترحيب
-    document.getElementById('mainContent').style.display = 'block'; // إظهار المحتوى الرئيسي
+    document.getElementById('intro').style.display = 'none'; 
+    document.getElementById('mainContent').style.display = 'block'; 
     alert("مرحبا / Welcome " + name + "!");
   } else {
     alert("المرجو إدخال اسمك / Please enter your name");
@@ -110,6 +128,13 @@ function enterSite() {
 
 <!-- محتوى الصفحة -->
 <div class="wrapper" id="mainContent">
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <h1>مرحبا بك في Ali Hub Media</h1>
+    <p>أفضل التطبيقات والمواقع والعروض الرقمية تحت سقف واحد!</p>
+  </div>
+
   <!-- قسم التطبيقات -->
   <div class="container">
     <h2>التطبيقات / Apps</h2>
