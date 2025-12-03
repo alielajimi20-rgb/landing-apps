@@ -3,70 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ali Hub Media - CTA</title>
-
+<title>Ali Hub Media</title>
 <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
 <style>
-html, body {
-  margin:0;
-  padding:0;
-  height:100%;
-  font-family:'Tajawal', Arial, sans-serif;
-}
+* { box-sizing: border-box; margin:0; padding:0; font-family:'Tajawal', Arial, sans-serif; }
 
-body {
+/* Common */
+body { background:#f0f4f8; color:#333; text-align:center; padding:0; margin:0; }
+.wrapper { max-width:800px; margin:auto; padding:20px; text-align:center; }
+
+/* CTA Overlay */
+#cta { 
+  position: fixed; top:0; left:0; width:100%; height:100%;
   background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  display:flex; justify-content:center; align-items:center;
 }
-
 .cta-container {
-  background: rgba(0,0,0,0.6);
-  padding:40px 50px;
-  border-radius:16px;
-  text-align:center;
-  color:white;
+  background: rgba(0,0,0,0.6); padding:40px 50px; border-radius:16px; color:white; text-align:center;
   box-shadow:0 8px 20px rgba(0,0,0,0.5);
 }
+.cta-container h1 { font-size:2.5em; margin-bottom:20px; text-shadow: 2px 2px 6px rgba(0,0,0,0.7); }
+.cta-container p { font-size:1.2em; margin-bottom:30px; text-shadow: 1px 1px 4px rgba(0,0,0,0.6); }
+.cta-container a.button { text-decoration:none; background:#fd7e14; color:white; padding:18px 30px; border-radius:12px; font-size:18px; transition:0.3s; display:inline-block; }
+.cta-container a.button:hover { background:#e8590c; transform: scale(1.05); }
 
-.cta-container h1 {
-  font-size:2.5em;
-  margin-bottom:20px;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
-}
-
-.cta-container p {
-  font-size:1.2em;
-  margin-bottom:30px;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-}
-
-.cta-container a.button {
-  text-decoration:none;
-  background:#fd7e14;
-  color:white;
-  padding:18px 30px;
-  border-radius:12px;
-  font-size:18px;
-  transition:0.3s;
-  display:inline-block;
-}
-
-.cta-container a.button:hover {
-  background:#e8590c;
-  transform: scale(1.05);
-}
-
-/* Responsive */
-@media screen and (max-width:768px) {
-  .cta-container { padding:30px 35px; }
-  .cta-container h1 { font-size:2em; }
-  .cta-container p { font-size:1em; }
-  .cta-container a.button { font-size:16px; padding:15px 25px; }
-}
+/* Landing Page */
+#landing { display:none; padding-top:20px; }
+.container { background:white; margin-bottom:25px; padding:25px; border-radius:16px; box-shadow:0 6px 20px rgba(0,0,0,0.12); }
+.container:hover { transform: translateY(-3px); }
+h2 { margin-bottom:12px; color:#007bff; font-size:1.5em; text-align:center; }
+p { color:#555; margin-bottom:18px; font-size:1em; text-align:center; }
+.button { display:flex; align-items:center; justify-content:center; padding:14px 18px; margin:10px 0; border-radius:12px; text-decoration:none; color:white; font-size:16px; transition: all 0.3s ease; }
+.button i { margin-right:10px; font-size:1.1em; }
+.button:hover { transform: scale(1.05); }
+.app { background:#007bff; } .app:hover { background:#005fcc; }
+.website { background:#28a745; } .website:hover { background:#1e7e34; }
+.ecommerce { background:#ffc107; color:#333; } .ecommerce:hover { background:#e0a800; }
+.cpa { background:#6f42c1; } .cpa:hover { background:#563d7c; }
+.featured { background:#fd7e14; } .featured:hover { background:#e8590c; }
+.disclaimer-section { background:#e9ecef; padding:20px; border-radius:12px; font-size:0.95em; line-height:1.6; text-align:left; box-shadow:0 4px 12px rgba(0,0,0,0.08); }
+.disclaimer-section h2 { color:#007bff; font-size:1.3em; margin-top:10px; }
+.disclaimer-section p { color:#555; }
+.back-top { display:inline-block; margin-top:15px; font-size:13px; padding:7px 12px; background:#6c757d; color:white; text-decoration:none; border-radius:6px; transition:0.3s; }
+.back-top:hover { background:#495057; }
+.small-logo { position:fixed; top:10px; right:10px; font-size:0.9em; font-weight:bold; color:#007bff; opacity:0.8; z-index:1000; }
 
 @media screen and (max-width:480px) {
   .cta-container { padding:25px 25px; }
@@ -78,11 +59,72 @@ body {
 </head>
 <body>
 
-<div class="cta-container">
-  <h1>اكتشف أفضل التطبيقات والمواقع والعروض الرقمية!</h1>
-  <p>انقر على الزر أدناه للبدء في استكشاف جميع الروابط المميزة لدينا.</p>
-  <a href="landing.html" class="button">ابدأ الآن / Start Now</a>
+<div class="small-logo">Ali Hub Media</div>
+
+<!-- CTA Overlay -->
+<div id="cta">
+  <div class="cta-container">
+    <h1>اكتشف أفضل التطبيقات والمواقع والعروض الرقمية!</h1>
+    <p>انقر على الزر أدناه للبدء في استكشاف جميع الروابط المميزة لدينا.</p>
+    <a href="#" class="button" onclick="showLanding()">ابدأ الآن / Start Now</a>
+  </div>
 </div>
+
+<!-- Landing Page -->
+<div id="landing" class="wrapper">
+
+  <div class="container" id="apps">
+    <h2>التطبيقات / Apps</h2>
+    <p>أفضل التطبيقات لجميع الأجهزة.</p>
+    <a href="https://play.google.com/store" target="_blank" class="button app"><i class="fas fa-mobile-alt"></i>تطبيق اليوم / App of the Day</a>
+    <a href="https://play.google.com/store" target="_blank" class="button app"><i class="fas fa-mobile-alt"></i>تطبيق مميز / Featured App</a>
+  </div>
+
+  <div class="container" id="websites">
+    <h2>المواقع / Websites</h2>
+    <p>مواقع مفيدة وجديدة يومياً.</p>
+    <a href="https://www.wikipedia.org/" target="_blank" class="button website"><i class="fas fa-globe"></i>موقع اليوم / Website of the Day</a>
+    <a href="https://www.mozilla.org/" target="_blank" class="button website"><i class="fas fa-globe"></i>موقع مميز / Featured Website</a>
+  </div>
+
+  <div class="container" id="products">
+    <h2>التجارة / Products</h2>
+    <p>منتجات وخدمات للبيع عبر الإنترنت.</p>
+    <a href="https://www.amazon.com/" target="_blank" class="button ecommerce"><i class="fas fa-box"></i>منتج جديد / New Product</a>
+    <a href="https://www.ebay.com/" target="_blank" class="button ecommerce"><i class="fas fa-box"></i>عرض خاص / Special Offer</a>
+  </div>
+
+  <div class="container" id="digital-offers">
+    <h2>العروض الرقمية / Digital Offers</h2>
+    <p>عروض وخدمات ربحية عبر الإنترنت.</p>
+    <a href="#" class="button cpa"><i class="fas fa-bolt"></i>عرض اليوم / Offer of the Day</a>
+    <a href="#" class="button cpa"><i class="fas fa-bolt"></i>عرض مميز / Featured Offer</a>
+  </div>
+
+  <div class="container" id="featured-sites">
+    <h2>مواقع مميزة / Featured Sites</h2>
+    <p>نرشح لكم أفضل المواقع المميزة.</p>
+    <a href="https://www.github.com/" target="_blank" class="button featured"><i class="fas fa-star"></i>موقع مميز 1 / Featured Site 1</a>
+    <a href="https://www.stackoverflow.com/" target="_blank" class="button featured"><i class="fas fa-star"></i>موقع مميز 2 / Featured Site 2</a>
+  </div>
+
+  <div class="disclaimer-section">
+    <h2>إخلاء المسؤولية / Disclaimer</h2>
+    <p>هذا الموقع يعمل في مجال التسويق بالعمولة (Affiliate Marketing). نحن لسنا الشركة المالكة للمنتجات أو الخدمات المذكورة هنا، وجميع المعلومات مقدمة لأغراض الترويج فقط.</p>
+    <h2>سياسة الخصوصية / Privacy Policy</h2>
+    <p>نحن نحترم خصوصيتك. لن نشارك بياناتك مع أي طرف ثالث بدون موافقتك.</p>
+    <a href="#top" class="back-top">العودة إلى الأعلى / Back to Top</a>
+  </div>
+
+</div>
+
+<script>
+function showLanding(){
+  document.getElementById('cta').style.display='none';
+  document.getElementById('landing').style.display='block';
+  window.scrollTo(0,0);
+}
+</script>
 
 </body>
 </html>
