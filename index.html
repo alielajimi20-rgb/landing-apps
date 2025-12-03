@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ali Hub Media</title>
 
-<!-- Google tag (gtag.js) -->
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CG13GMVVL0"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -16,38 +16,77 @@
   }
 </script>
 
+<!-- Fonts & Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
+
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Tajawal&display=swap');
-* { box-sizing: border-box; }
+* { box-sizing: border-box; margin:0; padding:0; font-family: 'Tajawal', Arial, sans-serif; }
 
-body { font-family: 'Tajawal', Arial, sans-serif; background: #f0f4f8; margin:0; padding:20px; text-align:center; }
-.wrapper { max-width:600px; margin:auto; overflow-y:auto; padding:10px; }
-.small-logo { position:fixed; top:10px; right:10px; font-size:0.9em; font-weight:bold; color:#007bff; opacity:0.7; z-index:1000; }
+body {
+  background: linear-gradient(to bottom right, #f0f4f8, #d9e2ec);
+  color:#333;
+}
 
-.container { background:white; margin-bottom:20px; padding:20px; border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:left; }
-h2 { margin-bottom:10px; color:#007bff; font-size:1.4em; text-align:center; }
-p { color:#555; margin-bottom:15px; font-size:1em; text-align:center; }
-.button { display:flex; align-items:center; justify-content:center; padding:12px 15px; margin:8px 0; border-radius:10px; text-decoration:none; color:white; font-size:16px; transition:0.3s; }
-.button i { margin-right:8px; }
+.wrapper { max-width:800px; margin:auto; padding:20px; text-align:center; }
+.small-logo { position:fixed; top:10px; right:10px; font-size:0.9em; font-weight:bold; color:#007bff; opacity:0.8; z-index:1000; }
+
+.container {
+  background:white; margin-bottom:25px; padding:25px; border-radius:16px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.12); transition:0.3s;
+}
+.container:hover { transform: translateY(-3px); }
+
+h2 { margin-bottom:12px; color:#007bff; font-size:1.5em; text-align:center; }
+p { color:#555; margin-bottom:18px; font-size:1em; text-align:center; }
+
+.button {
+  display:flex; align-items:center; justify-content:center; padding:14px 18px; margin:10px 0;
+  border-radius:12px; text-decoration:none; color:white; font-size:16px;
+  transition: all 0.3s ease;
+}
+.button i { margin-right:10px; font-size:1.1em; }
+.button:hover { transform: scale(1.05); }
+
 .app { background:#007bff; } .app:hover { background:#005fcc; }
 .website { background:#28a745; } .website:hover { background:#1e7e34; }
 .ecommerce { background:#ffc107; color:#333; } .ecommerce:hover { background:#e0a800; }
 .cpa { background:#6f42c1; } .cpa:hover { background:#563d7c; }
 .featured { background:#fd7e14; } .featured:hover { background:#e8590c; }
 
-.disclaimer-section { background:#e9ecef; padding:15px; margin-top:20px; border-radius:10px; font-size:0.95em; line-height:1.5; text-align:left; }
-.disclaimer-section h2 { color:#007bff; font-size:1.2em; margin-top:10px; }
+.disclaimer-section {
+  background:#e9ecef; padding:20px; border-radius:12px; font-size:0.95em; line-height:1.6; text-align:left;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+.disclaimer-section h2 { color:#007bff; font-size:1.3em; margin-top:10px; }
 .disclaimer-section p { color:#555; }
-.back-top { display:inline-block; margin-top:10px; font-size:12px; padding:6px 10px; background:#6c757d; color:white; text-decoration:none; border-radius:6px; transition:0.3s; }
+.back-top {
+  display:inline-block; margin-top:15px; font-size:13px; padding:7px 12px;
+  background:#6c757d; color:white; text-decoration:none; border-radius:6px; transition:0.3s;
+}
 .back-top:hover { background:#495057; }
 
 /* Consent Banner */
-#consent-banner { position:fixed; bottom:0; left:0; right:0; background:#007bff; color:white; padding:15px; z-index:10000; display:flex; justify-content:space-between; align-items:center; font-size:0.95em; }
-#consent-banner button { background:white; color:#007bff; border:none; padding:8px 12px; border-radius:5px; cursor:pointer; font-weight:bold; }
+#consent-banner {
+  position:fixed; bottom:0; left:0; right:0; background:#007bff; color:white;
+  padding:15px; z-index:10000; display:flex; justify-content:space-between; align-items:center; font-size:0.95em;
+  box-shadow:0 -4px 12px rgba(0,0,0,0.2);
+}
+#consent-banner button {
+  background:white; color:#007bff; border:none; padding:8px 14px; border-radius:6px;
+  cursor:pointer; font-weight:bold;
+}
 
-@media screen and (max-width:768px) { .wrapper { max-width:90%; } h2 { font-size:1.2em; } p { font-size:0.95em; } .button { font-size:15px; padding:12px; } }
-@media screen and (max-width:480px) { h2 { font-size:1.1em; } p { font-size:0.9em; } .button { font-size:14px; padding:10px; } }
+/* Responsive */
+@media screen and (max-width:768px) {
+  .wrapper { max-width:95%; }
+  h2 { font-size:1.3em; } p { font-size:0.95em; }
+  .button { font-size:15px; padding:12px; }
+}
+@media screen and (max-width:480px) {
+  h2 { font-size:1.1em; } p { font-size:0.9em; }
+  .button { font-size:14px; padding:10px; }
+}
 </style>
 </head>
 <body>
@@ -73,7 +112,7 @@ if(localStorage.getItem('consentGiven')==='true'){
 <div class="small-logo">Ali Hub Media</div>
 <div class="wrapper">
 
-  <!-- قسم التطبيقات -->
+  <!-- Apps -->
   <div class="container">
     <h2>التطبيقات / Apps</h2>
     <p>أفضل التطبيقات لجميع الأجهزة.</p>
@@ -81,7 +120,7 @@ if(localStorage.getItem('consentGiven')==='true'){
     <a href="LINK2" class="button app"><i class="fas fa-mobile-alt"></i>تطبيق مميز / Featured App</a>
   </div>
 
-  <!-- قسم المواقع -->
+  <!-- Websites -->
   <div class="container">
     <h2>المواقع / Websites</h2>
     <p>مواقع مفيدة وجديدة يومياً.</p>
@@ -89,7 +128,7 @@ if(localStorage.getItem('consentGiven')==='true'){
     <a href="LINK4" class="button website"><i class="fas fa-globe"></i>موقع مميز / Featured Website</a>
   </div>
 
-  <!-- قسم التجارة / المنتجات -->
+  <!-- Products -->
   <div class="container">
     <h2>التجارة / Products</h2>
     <p>منتجات وخدمات للبيع عبر الإنترنت.</p>
@@ -97,7 +136,7 @@ if(localStorage.getItem('consentGiven')==='true'){
     <a href="LINK6" class="button ecommerce"><i class="fas fa-box"></i>عرض خاص / Special Offer</a>
   </div>
 
-  <!-- قسم العروض الرقمية / CPA -->
+  <!-- Digital Offers -->
   <div class="container">
     <h2>العروض الرقمية / Digital Offers</h2>
     <p>عروض وخدمات ربحية عبر الإنترنت.</p>
@@ -105,7 +144,7 @@ if(localStorage.getItem('consentGiven')==='true'){
     <a href="LINK8" class="button cpa"><i class="fas fa-bolt"></i>عرض مميز / Featured Offer</a>
   </div>
 
-  <!-- قسم مواقع مميزة -->
+  <!-- Featured Sites -->
   <div class="container">
     <h2>مواقع مميزة / Featured Sites</h2>
     <p>نرشح لكم أفضل المواقع المميزة.</p>
@@ -113,7 +152,7 @@ if(localStorage.getItem('consentGiven')==='true'){
     <a href="LINK10" class="button featured"><i class="fas fa-star"></i>موقع مميز 2 / Featured Site 2</a>
   </div>
 
-  <!-- قسم القانوني -->
+  <!-- Disclaimer -->
   <div class="disclaimer-section">
     <h2>إخلاء المسؤولية / Disclaimer</h2>
     <p>هذا الموقع يعمل في مجال التسويق بالعمولة (Affiliate Marketing). نحن لسنا الشركة المالكة للمنتجات أو الخدمات المذكورة هنا، وجميع المعلومات مقدمة لأغراض الترويج فقط.</p>
