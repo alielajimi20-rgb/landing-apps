@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple CPA Landing Page</title>
+    <title>CPA Landing Page</title>
 
     <style>
         * {
@@ -70,20 +70,51 @@
             background: #0d5fcc;
         }
 
-        /* ===== Responsive Enhancements ===== */
-        @media (min-width: 700px) {
-            .container {
-                max-width: 500px;
-                padding: 35px;
-            }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #555;
+        }
 
-            h2 {
-                font-size: 24px;
-            }
+        .footer a {
+            color: #1a73e8;
+            text-decoration: none;
+            margin: 0 8px;
+        }
 
-            button {
-                font-size: 20px;
-            }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Modal (Legal Popups) */
+        .modal {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 25px;
+            margin: 80px auto;
+            max-width: 600px;
+            border-radius: 12px;
+            text-align: left;
+            max-height: 80%;
+            overflow-y: auto;
+        }
+
+        .close {
+            float: right;
+            font-size: 22px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -91,19 +122,62 @@
 
 <div class="container">
 
-    <!-- صورة مجانية قانونية -->
+    <!-- Image -->
     <img class="header-image" 
          src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4"
          alt="Working on laptop">
 
-    <h2>Welcome! Please Enter Your Name</h2>
+    <h2>Welcome! Enter Your Name</h2>
 
-    <input type="text" placeholder="Your Name (English)">
-    <input type="text" placeholder="اسمك (Arabic)">
+    <input type="text" placeholder="Your Name" id="username">
 
     <button onclick="alert('Welcome!')">WELCOME</button>
 
 </div>
+
+<!-- Footer with Legal links -->
+<div class="footer">
+    <a href="#" onclick="openModal('privacy')">Privacy Policy</a> •
+    <a href="#" onclick="openModal('disclaimer')">Disclaimer</a>
+</div>
+
+<!-- Privacy Policy Modal -->
+<div id="privacy" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('privacy')">&times;</span>
+        <h2>Privacy Policy</h2>
+        <p>
+        We do not collect personal information beyond what you provide voluntarily.
+        Any data entered on this page may be used for marketing, communication, or
+        redirection purposes, depending on the offer you choose. We do not sell or
+        share your information with third parties. By using this website, you agree
+        to this policy.
+        </p>
+    </div>
+</div>
+
+<!-- Disclaimer Modal -->
+<div id="disclaimer" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('disclaimer')">&times;</span>
+        <h2>Disclaimer</h2>
+        <p>
+        This website is not affiliated with, endorsed by, or connected to any brand,
+        company, or organization referenced in the promotional content. Results may
+        vary and are not guaranteed. By using this page, you acknowledge that all
+        actions taken are your responsibility.
+        </p>
+    </div>
+</div>
+
+<script>
+function openModal(id) {
+    document.getElementById(id).style.display = "block";
+}
+function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+}
+</script>
 
 </body>
 </html>
