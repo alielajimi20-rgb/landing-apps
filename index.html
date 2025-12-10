@@ -1,138 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CPA Landing Page</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background: #f4f4f4;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 450px;
-            margin: 40px auto;
-            background: #ffffff;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.12);
-            text-align: center;
-        }
-
-        .header-image {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-            object-fit: cover;
-            max-height: 260px;
-        }
-
-        h2 {
-            font-size: 22px;
-            margin-top: 20px;
-            color: #333;
-            font-weight: 600;
-        }
-
-        input {
-            width: 100%;
-            padding: 14px;
-            margin-top: 15px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 17px;
-        }
-
-        button {
-            width: 100%;
-            padding: 16px;
-            margin-top: 22px;
-            font-size: 18px;
-            background: #1a73e8;
-            border: none;
-            color: white;
-            font-weight: bold;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-
-        button:hover {
-            background: #0d5fcc;
-        }
-
-        /* Footer */
-        .footer {
-            text-align: center;
-            margin-top: 30px;
-            font-size: 14px;
-            color: #555;
-        }
-
-        .footer a {
-            color: #1a73e8;
-            text-decoration: none;
-            margin: 0 8px;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Modal (Legal Popups) */
-        .modal {
-            display: none;
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-            padding: 20px;
-        }
-
-        .modal-content {
-            background: white;
-            padding: 25px;
-            margin: 80px auto;
-            max-width: 600px;
-            border-radius: 12px;
-            text-align: left;
-            max-height: 80%;
-            overflow-y: auto;
-        }
-
-        .close {
-            float: right;
-            font-size: 22px;
-            cursor: pointer;
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Apps to Earn</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+body { background: #f4f4f4; }
+.container {
+    width: 90%; max-width: 450px; margin: 40px auto; background: #fff;
+    padding: 25px; border-radius: 15px; box-shadow: 0 4px 14px rgba(0,0,0,0.12); text-align: center;
+}
+.header-image { width: 100%; height: auto; border-radius: 12px; object-fit: cover; max-height: 260px; }
+h1 { font-size: 24px; color: #222; margin: 20px 0; }
+p { font-size: 16px; margin: 10px 0 20px 0; color: #555; }
+.cta-button {
+    display: inline-block; padding: 15px 25px; background: #1a73e8; color: #fff;
+    font-size: 18px; font-weight: bold; border-radius: 10px; cursor: pointer; text-decoration: none;
+}
+.cta-button:hover { background: #0d5fcc; }
+.footer { text-align: center; margin-top: 30px; font-size: 14px; color: #555; }
+.footer a { color: #1a73e8; text-decoration: none; margin: 0 8px; }
+.footer a:hover { text-decoration: underline; }
+.modal { display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); padding: 20px; }
+.modal-content { background: white; padding: 25px; margin: 80px auto; max-width: 600px; border-radius: 12px; text-align: left; max-height: 80%; overflow-y: auto; }
+.close { float: right; font-size: 22px; cursor: pointer; }
+</style>
 </head>
 <body>
 
 <div class="container">
-
     <!-- Image -->
-    <img class="header-image" 
-         src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4"
-         alt="Working on laptop">
+    <img class="header-image" src="https://via.placeholder.com/450x260.png?text=Play+and+Earn" alt="Play and Earn">
 
-    <h2>Welcome! Enter Your Name</h2>
+    <!-- Main Offer Text -->
+    <h1>Apps to Earn</h1>
+    <p>Download → Play → Win! US — Incent — Email Submit</p>
 
-    <input type="text" placeholder="Your Name" id="username">
+    <!-- CTA Button triggers the Content Locker -->
+    <a class="cta-button" href="#" onclick="document.getElementById('locker').style.display='block'; return false;">Start Now</a>
 
-    <button onclick="alert('Welcome!')">WELCOME</button>
-
+    <!-- Content Locker Container (Initially hidden) -->
+    <div id="locker" style="display:none; margin-top:20px;">
+        <noscript><meta http-equiv="refresh" content="0;url=https://lockedapp.org/noscript" /></noscript>
+        <script type="text/javascript" id="ogjs" src="https://lockedapp.org/cl/js/9v966l"></script>
+    </div>
 </div>
 
 <!-- Footer with Legal links -->
@@ -146,13 +58,7 @@
     <div class="modal-content">
         <span class="close" onclick="closeModal('privacy')">&times;</span>
         <h2>Privacy Policy</h2>
-        <p>
-        We do not collect personal information beyond what you provide voluntarily.
-        Any data entered on this page may be used for marketing, communication, or
-        redirection purposes, depending on the offer you choose. We do not sell or
-        share your information with third parties. By using this website, you agree
-        to this policy.
-        </p>
+        <p>We do not collect personal information beyond what you provide voluntarily...</p>
     </div>
 </div>
 
@@ -161,22 +67,13 @@
     <div class="modal-content">
         <span class="close" onclick="closeModal('disclaimer')">&times;</span>
         <h2>Disclaimer</h2>
-        <p>
-        This website is not affiliated with, endorsed by, or connected to any brand,
-        company, or organization referenced in the promotional content. Results may
-        vary and are not guaranteed. By using this page, you acknowledge that all
-        actions taken are your responsibility.
-        </p>
+        <p>This website is not affiliated with any brand referenced in the offer. Results may vary...</p>
     </div>
 </div>
 
 <script>
-function openModal(id) {
-    document.getElementById(id).style.display = "block";
-}
-function closeModal(id) {
-    document.getElementById(id).style.display = "none";
-}
+function openModal(id) { document.getElementById(id).style.display = "block"; }
+function closeModal(id) { document.getElementById(id).style.display = "none"; }
 </script>
 
 </body>
