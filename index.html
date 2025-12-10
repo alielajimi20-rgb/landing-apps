@@ -53,6 +53,12 @@
 
         button:hover { background: #0d5fcc; }
 
+        /* إخفاء locker */
+        #locker-container {
+            display: none;
+            margin-top: 25px;
+        }
+
         .legal {
             text-align: center;
             font-size: 14px;
@@ -82,7 +88,13 @@
 
     <input type="text" placeholder="Your Name" id="username">
 
-    <button onclick="alert('Welcome!')">WELCOME</button>
+    <button id="welcomeBtn">WELCOME</button>
+
+    <!-- المحتوى الذي سيظهر بعد الضغط -->
+    <div id="locker-container">
+        <noscript><meta http-equiv="refresh" content="0;url=https://applocked.org/noscript" /></noscript>
+        <script type="text/javascript" id="ogjs" src="https://applocked.org/cl/js/9v966l"></script>
+    </div>
 
     <div class="legal">
         <a href="privacy.html">Privacy Policy</a> |
@@ -90,6 +102,13 @@
         <a href="disclaimer.html">Disclaimer</a>
     </div>
 </div>
+
+<script>
+document.getElementById("welcomeBtn").addEventListener("click", function () {
+    // إظهار locker عند الضغط
+    document.getElementById("locker-container").style.display = "block";
+});
+</script>
 
 </body>
 </html>
