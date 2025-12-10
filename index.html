@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CPA Landing Page</title>
+    <title>Landing Page</title>
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-
         body { background: #f4f4f4; }
-
         .container {
             width: 90%;
             max-width: 450px;
@@ -20,61 +18,14 @@
             box-shadow: 0 4px 14px rgba(0,0,0,0.12);
             text-align: center;
         }
-
-        .header-image {
-            width: 100%;
-            border-radius: 12px;
-            max-height: 260px;
-            object-fit: cover;
-        }
-
+        .header-image { width: 100%; border-radius: 12px; max-height: 260px; object-fit: cover; }
         h2 { font-size: 22px; margin-top: 20px; color: #333; }
-
-        input {
-            width: 100%;
-            padding: 14px;
-            margin-top: 15px;
-            font-size: 17px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-        }
-
-        button {
-            width: 100%;
-            padding: 16px;
-            margin-top: 22px;
-            font-size: 18px;
-            background: #1a73e8;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-
+        input { width: 100%; padding: 14px; margin-top: 15px; font-size: 17px; border: 1px solid #ccc; border-radius: 8px; }
+        button { width: 100%; padding: 16px; margin-top: 22px; font-size: 18px; background: #1a73e8; color: white; border: none; border-radius: 10px; cursor: pointer; }
         button:hover { background: #0d5fcc; }
-
-        /* إخفاء locker */
-        #locker-container {
-            display: none;
-            margin-top: 25px;
-        }
-
-        .legal {
-            text-align: center;
-            font-size: 14px;
-            margin-top: 25px;
-            color: #555;
-        }
-
-        .legal a {
-            color: #1a73e8;
-            text-decoration: none;
-            margin: 0 5px;
-        }
-
-        .legal a:hover {
-            text-decoration: underline;
-        }
+        .legal { text-align: center; font-size: 14px; margin-top: 25px; color: #555; }
+        .legal a { color: #1a73e8; text-decoration: none; margin: 0 5px; }
+        .legal a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -88,13 +39,7 @@
 
     <input type="text" placeholder="Your Name" id="username">
 
-    <button id="welcomeBtn">WELCOME</button>
-
-    <!-- المحتوى الذي سيظهر بعد الضغط -->
-    <div id="locker-container">
-        <noscript><meta http-equiv="refresh" content="0;url=https://applocked.org/noscript" /></noscript>
-        <script type="text/javascript" id="ogjs" src="https://applocked.org/cl/js/9v966l"></script>
-    </div>
+    <button onclick="alert('Welcome!')">WELCOME</button>
 
     <div class="legal">
         <a href="privacy.html">Privacy Policy</a> |
@@ -102,13 +47,6 @@
         <a href="disclaimer.html">Disclaimer</a>
     </div>
 </div>
-
-<script>
-document.getElementById("welcomeBtn").addEventListener("click", function () {
-    // إظهار locker عند الضغط
-    document.getElementById("locker-container").style.display = "block";
-});
-</script>
 
 </body>
 </html>
